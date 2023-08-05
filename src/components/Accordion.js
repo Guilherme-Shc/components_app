@@ -4,7 +4,8 @@ import { GoChevronLeft, GoChevronDown } from "react-icons/go";
 function Accordion({items}){
     /*UseState começando como -1 para que nenhum dos itens esteja expandido ao carregar a página*/
     const [expandedIndex, setExpandedIndex] = useState(-1); 
-
+    
+    /*IMPORTANTE: Corrigir o bug de double click que pode ser feito pelo console*/
     const handleClick = (nextIndex) =>{
         if(expandedIndex === nextIndex){
             setExpandedIndex(-1);
