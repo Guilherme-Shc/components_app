@@ -7,6 +7,7 @@ import ModalPage from "./pages/ModalPage";
 import TablePage from "./pages/TablePage";
 import Counterpage from "./pages/CounterPage";
 import Counterpage2 from "./pages/CounterPage2";
+import MidiaPage from "./pages/MidiaPage";
 
 function App() {
     return (<div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
@@ -32,6 +33,9 @@ function App() {
             </Route>
             <Route path='/counter_2.0'>
                 <Counterpage2 initialCount={0}/>
+            </Route>
+            <Route path='/midia'>
+                <MidiaPage/>
             </Route>
         </div>
     </div>);
