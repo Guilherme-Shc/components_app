@@ -1,6 +1,12 @@
+import { Fragment } from "react"; //used to add a key to the header without getting an error 
+
 function Table({data, config, keyFn}) {
 
     const renderedHeaders = config.map((column) =>{
+        if(column.header){
+            return <Fragment key={column.label}>{column.header()}</Fragment>;
+        }
+
         return <th key={column.label}>{column.label}</th>
     });
 
