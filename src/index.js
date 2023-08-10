@@ -4,13 +4,16 @@ import ReactDOM from "react-dom/client";
 import App from './App'
 import { NavigationProvider } from './context/navigation';
 import { faker } from "@faker-js/faker/locale/en";
-import './store';
+import {store} from './store';
+import { Provider } from 'react-redux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <NavigationProvider>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
     </NavigationProvider>
 );
 
